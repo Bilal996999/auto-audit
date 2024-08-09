@@ -1,6 +1,6 @@
 "use client"
 
-import ThemeBtn from "./themeBtn";
+import ThemeBtn from "@/components/ThemeBtn";
 
 const VinForm = () => {
 
