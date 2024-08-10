@@ -16,3 +16,25 @@
   }
 }
 
+.faq-accordion .accordion-header button {
+  border: none;
+  padding: 28px 8px;
+  background: transparent;
+  border-bottom: 1px solid #eee;
+  outline: none;
+  box-shadow: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.faq-accordion .accordion-item {
+  border: none;
+}
+.faq-accordion .accordion-body{
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5em;
+}
+.faq-accordion .accordion-header button[aria-expanded="true"] {
+  color:#009fe1 !important
+}

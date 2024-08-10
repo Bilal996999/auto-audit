@@ -6,7 +6,7 @@ const SectionHeading = ({smallHeading, mainHeading}) => {
         <h3 className='text-[#999] text-[20px] font-medium mb-5'>
             {smallHeading}
         </h3>
-        <h2 className='text-[#222] text-[44px] font-bold'>
+        <h2 className='text-[#222] text-[44px] font-bold max-w-[720px] mx-auto leading-[1.2em]'>
             {mainHeading}
         </h2>
     </div>
