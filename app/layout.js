@@ -1,6 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
+import { Providers } from "@/app/Providers";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={outfit.className}>
         <Providers>
           {children}
-        </Providers>
+        </Providers>  
         </body>
     </html>
   );
