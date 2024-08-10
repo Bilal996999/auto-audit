@@ -11,13 +11,17 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@nextui-org/react": "^2.4.6",
     "bootstrap": "^5.3.3",
+    "framer-motion": "^11.3.24",
     "heroicons": "^2.1.5",
     "next": "14.2.5",
     "react": "^18",
     "react-bootstrap": "^2.10.4",
     "react-bootstrap-accordion": "^1.0.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8",
