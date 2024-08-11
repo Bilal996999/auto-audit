@@ -46,7 +46,7 @@ const Header = () => {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      item.current ? 'bg-transparent text-[#222]'  : 'text-[#222] hover:text-themeColor',
                       'rounded-md px-3 py-2 font-medium text-[20px]',
                     )}
                   >
@@ -71,7 +71,7 @@ const Header = () => {
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                item.current ? 'bg-transparent text-[#222]' : 'text-[#222] hover:text-themeColor',
                 'block rounded-md px-3 py-2 text-base font-medium',
               )}
             >
