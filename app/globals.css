@@ -78,3 +78,7 @@ button.slick-arrow {
   width:fit-content;
   height:fit-content;
 }
+.vin-section{
+  background: url('../images/vin-bg.png') no-repeat center;
+  background-size: cover;
+}

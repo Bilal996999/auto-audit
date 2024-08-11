@@ -3,6 +3,7 @@ import HomeHero from "@/components/HomeHero";
 import Image from "next/image";
 import HomePage from "@/pages/HomePage"
 import { NextUIProvider } from "@nextui-org/react";
+import Footer from "@/components/Footer";
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
       <NextUIProvider>
         <Header />
         <HomePage />
+        <Footer/>
       </NextUIProvider>
     </main>
 

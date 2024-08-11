@@ -19,7 +19,7 @@ const HomeHero = () => {
                             Car by Checking<br/>
                             its VIN History<br/>
                         </h1>
-                        <div className='mt-10'>
+                        <div className='mt-[90px]'>
                             <VinForm/>
                         </div>
                     </div>
