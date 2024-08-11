@@ -41,7 +41,7 @@ const Footer = () => {
                                 Documentation
                             </li>
                             <li className='text-[18px] text-[#63657E] my-2'>
-                                Client's Feedback
+                                Client{`'`}s Feedback
                             </li>
                         </ul>
                     </div>
@@ -73,7 +73,7 @@ const Footer = () => {
                         </h4>
                         <ul className='list-none mt-12'>
                             <li className='text-[18px] text-[#63657E] my-2 mb-10'>
-                                London, New area road 04, England
+                                London{','} New area road 04{','} England
                             </li>
                             <Image
                                 src={socialIcons}
