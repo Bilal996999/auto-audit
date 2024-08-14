@@ -3,7 +3,7 @@ import React from 'react'
 
 const KeyFeatureBox = ({image, title, title2, content}) => {
   return (
-    <div className='border border-[#DDDDDD] rounded-2xl p-7 bg-[#fff]'>
+    <div className='border border-[#DDDDDD] rounded-2xl p-7 bg-[#fff] transition-shadow hover:shadow-md'>
         <Image
             src={image}
         />

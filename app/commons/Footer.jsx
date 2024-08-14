@@ -4,6 +4,7 @@ import logo from "@/images/logo.png"
 import Image from 'next/image'
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import socialIcons from "@/images/social-icons.png"
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -15,33 +16,30 @@ const Footer = () => {
                         <ul className='list-none mt-16'>
                             <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                                 <EnvelopeIcon className='size-5' />
-                                <a href='mailto:connect@finefin.com'>connect@finefin.com</a>
+                                <a href='mailto:connect@finefin.com' className='text-[#63657E] transition-colors hover:text-themeColor'>connect@finefin.com</a>
                             </li>
                             <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                                 <PhoneIcon className='size-5' />
-                                <a href='tel:548574367942'>548 574 3679 42</a>
+                                <a href='tel:548574367942' className='text-[#63657E] transition-colors hover:text-themeColor'>548 574 3679 42</a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h4 className='text-[22px] font-medium'>
-                            Home
+                            Quick Links
                         </h4>
                         <ul className='list-none mt-9'>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Features
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/">Home</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Pricing
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/about-us">About Us</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Knowledge Base
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/contact-us">Contact Us</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Documentation
-                            </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Client{`'`}s Feedback
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/">Sample Report</Link>
                             </li>
                         </ul>
                     </div>
@@ -50,20 +48,14 @@ const Footer = () => {
                             Pages
                         </h4>
                         <ul className='list-none mt-9'>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Blogs
+                            <li className='text-[18px] text-[#63657E] my-3'>
+                                Terms and Condition
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Careers
+                            <li className='text-[18px] text-[#63657E] my-3'>
+                                Privacy Policy
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Communities
-                            </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Webinars
-                            </li>
-                            <li className='text-[18px] text-[#63657E] my-2'>
-                                Videos
+                            <li className='text-[18px] text-[#63657E] my-3'>
+                                Refund Policy
                             </li>
                         </ul>
                     </div>

@@ -2,14 +2,15 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Logo from "@/images/logo.png"
-import ThemeBtn from './ThemeBtn'
+import ThemeBtn from '../../components/ThemeBtn'
+import Link from 'next/link'
+import { redirect } from 'next/navigation'
+
 
 const navigation = [
+    { name: 'Home', href: '/', current: false },
     { name: 'Sample Reports', href: '#', current: false },
-    { name: 'Services', href: '#', current: false },
-    { name: 'How it works?', href: '#', current: false },
-    { name: 'Blog', href: '#', current: false },
-    { name: 'About us', href: '#', current: false },
+    { name: 'About Us', href: '/about-us', current: false },
   ]
 
   function classNames(...classes) {
@@ -32,32 +33,34 @@ const Header = () => {
           </div>
           <div className="flex flex-1 md:items-center justify-center sm:items-stretch sm:justify-end">
             <div className="flex md:flex-1 sm:flex-grow-0 items-center">
-              <Image
-                alt="Your Company"
-                src={Logo}
-                className="h-[58px] w-auto"
-              />
+              <Link href='/'>
+                <Image
+                  alt="Your Company"
+                  src={Logo}
+                  className="h-[58px] w-auto"
+                />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-transparent text-[#222]'  : 'text-[#222] hover:text-themeColor',
-                      'rounded-md px-3 py-2 font-medium text-[20px]',
+                      item.current ? 'bg-transparent text-[#222]' : 'text-[#222] hover:text-themeColor',
+                      'transition-colors rounded-md px-3 py-2 font-medium text-[20px]',
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <ThemeBtn text="Sign Up" size="small"/>
+            <ThemeBtn text="Contact Us" redirect="/contact-us" size="small"/>
           </div>
         </div>
       </div>
