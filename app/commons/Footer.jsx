@@ -48,14 +48,14 @@ const Footer = () => {
                             Pages
                         </h4>
                         <ul className='list-none mt-9'>
-                            <li className='text-[18px] text-[#63657E] my-3'>
-                                Terms and Condition
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/terms-and-condition">Terms and Condition</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3'>
-                                Privacy Policy
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/privacy-policy">Privacy Policy</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3'>
-                                Refund Policy
+                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                                <Link href="/refund-policy">Refund Policy</Link>
                             </li>
                         </ul>
                     </div>
