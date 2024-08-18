@@ -53,7 +53,7 @@ const TermsAndConditionPage = () => {
                 Age Requirements for use of service
               </h2>
               <p className='text-[20px] text-[#666]'>
-                Auto Audit Pro's services are available to individuals aged 13 and older. Those under 18 must obtain parental or guardian consent, with the understanding that the parent or guardian agrees to be bound by these Terms as well.
+                Auto Audit Pro{"'"}s services are available to individuals aged 13 and older. Those under 18 must obtain parental or guardian consent, with the understanding that the parent or guardian agrees to be bound by these Terms as well.
               </p>
 
               {/* ======================================================================= */}
@@ -62,9 +62,9 @@ const TermsAndConditionPage = () => {
                 Software and hardware requirements
               </h2>
               <p className='text-[20px] text-[#666]'>
-                To use Auto Audit Pro’s services, you need Internet access and certain software, which you may need to purchase. Upgrades and updates may be required occasionally. For optimal performance, we recommend a high-speed Internet connection. We do not guarantee that your computer or device will be compatible with the Services. We are not responsible for any failure to access the site or our Services, and no refunds will be provided in such cases.
+                To use Auto Audit Pro{"'"}s services, you need Internet access and certain software, which you may need to purchase. Upgrades and updates may be required occasionally. For optimal performance, we recommend a high-speed Internet connection. We do not guarantee that your computer or device will be compatible with the Services. We are not responsible for any failure to access the site or our Services, and no refunds will be provided in such cases.
               </p>
-              
+
             </div>
             <aside className='w-[30%] sticky top-3 bottom-3'>
               <FloatVinCard />

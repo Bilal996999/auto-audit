@@ -101,7 +101,7 @@ const ContactPage = () => {
                                 Buying a Used Vehicle?
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                Before making a major purchase, always check the vehicle{"'"}s history. Avoid uncertainty by accessing detailed information on the vehicle’s past. Validate past accidents, previous owners, potential odometer rollbacks, and more to make an informed decision and avoid future issues.
+                                Before making a major purchase, always check the vehicle{"'"}s history. Avoid uncertainty by accessing detailed information on the vehicle{"'"}s past. Validate past accidents, previous owners, potential odometer rollbacks, and more to make an informed decision and avoid future issues.
                             </p>
 
                             {/* ======================================================================= */}

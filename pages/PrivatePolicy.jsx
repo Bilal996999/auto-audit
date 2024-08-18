@@ -74,7 +74,7 @@ const PrivatePolicy = () => {
                                 Cookies
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                Yes, we use cookies—small files transferred to your computer's hard drive by our site or its service provider. Cookies help us recognize your browser and remember your preferences for future visits. They also provide aggregate data on site interaction and traffic to improve our website. You can disable cookies through your browser settings, but doing so may affect the functionality of our site and our ability to provide you with services.
+                                Yes, we use cookies—small files transferred to your computer{"'"}s hard drive by our site or its service provider. Cookies help us recognize your browser and remember your preferences for future visits. They also provide aggregate data on site interaction and traffic to improve our website. You can disable cookies through your browser settings, but doing so may affect the functionality of our site and our ability to provide you with services.
                             </p>
 
                             {/* ======================================================================= */}
@@ -101,7 +101,7 @@ const PrivatePolicy = () => {
                                 California Online Privacy Protection Act Compliance
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                We are committed to complying with the California Online Privacy Protection Act and will not share personal information with outside parties without explicit consent. Users can update their information by visiting “My Account” and selecting “Account Settings.”
+                                We are committed to complying with the California Online Privacy Protection Act and will not share personal information with outside parties without explicit consent. Users can update their information by visiting {'"'}My Account{'"'} and selecting {'"'}Account Settings.{'"'}
                             </p>
 
                             {/* ======================================================================= */}
@@ -110,7 +110,7 @@ const PrivatePolicy = () => {
                                 Do Not Track Requests
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                            We do not respond to Do Not Track requests. For more information, visit <a href="https://allaboutdnt.com">https://allaboutdnt.com</a>
+                                We do not respond to Do Not Track requests. For more information, visit <a href="https://allaboutdnt.com">https://allaboutdnt.com</a>
                             </p>
 
                             {/* ======================================================================= */}
