@@ -125,10 +125,10 @@ const PrivatePolicy = () => {
                             {/* ======================================================================= */}
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Children's Online Privacy Protection Act Compliance
+                                Children{"'"}s Online Privacy Protection Act Compliance
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                We comply with COPPA (Children's Online Privacy Protection Act) and do not collect information from individuals under 13 years old. If a minor provides us with information, it can be deleted by contacting us at info@autoauditprovin.com.
+                                We comply with COPPA (Children{"'"}s Online Privacy Protection Act) and do not collect information from individuals under 13 years old. If a minor provides us with information, it can be deleted by contacting us at info@autoauditprovin.com.
                             </p>
 
                             {/* ======================================================================= */}
