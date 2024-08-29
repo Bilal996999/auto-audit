@@ -17,8 +17,8 @@ const SignInPage = () => {
 
     const [error, setError] = useState(false)
 
-    const EMAIL_ = "admin@admin.com"
-    const PASS_ = "Admin@1234"
+    const EMAILField = "admin@admin.com"
+    const PASSfield = "admin@1234"
 
     const handleChange = (e) => {
         
@@ -32,17 +32,21 @@ const SignInPage = () => {
             }
     })
 
+    console.log(loginData)
         
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if(loginData.email != EMAIL_ && loginData.pass != PASS_){
-            setError(true)
+        if(loginData.email == EMAILField && loginData.pass == PASSfield){
+            setError(false)
+            console.log("valid")
+            // router.push('/dashboard')
         }
         else{
-            router.push('/dashboard')
+            setError(true)
+            console.log("invalid")
         }
     }
 
