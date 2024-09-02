@@ -43,7 +43,7 @@ export default function VinTable() {
   useEffect(() => {
     
     try {
-      fetch("http://localhost:3000/api/entries/", {
+      fetch("https://auto-audit.vercel.app/api/entries/", {
         cache: "no-store",
         method: "GET"
       }).then(res => {
