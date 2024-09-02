@@ -42,7 +42,7 @@ const SignInPage = () => {
         if(loginData.email == EMAILField && loginData.pass == PASSfield){
             setError(false)
             console.log("valid")
-            // router.push('/dashboard')
+            router.push('/dashboard')
         }
         else{
             setError(true)

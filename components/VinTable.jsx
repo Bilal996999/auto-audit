@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import {
   Table,
   TableHeader,
@@ -16,12 +17,13 @@ import {
   User,
   Pagination,
 } from "@nextui-org/react";
-import {PlusIcon} from "@/components/PlusIcon";
-import {VerticalDotsIcon} from "@/components/VerticalDotsIcon";
-import {SearchIcon} from "@/components/SearchIcon";
-import {ChevronDownIcon} from "@/components/ChevronDownIcon";
-import {columns, users, statusOptions} from "@/components/data";
-import {capitalize} from "@/components/utils";
+import { PlusIcon } from "@/components/PlusIcon";
+import { VerticalDotsIcon } from "@/components/VerticalDotsIcon";
+import { SearchIcon } from "@/components/SearchIcon";
+import { ChevronDownIcon } from "@/components/ChevronDownIcon";
+import { columns, users, statusOptions } from "@/components/data";
+import { capitalize } from "@/components/utils";
+import GetEntries from "./useFetch";
 
 const statusColorMap = {
   active: "success",
@@ -29,9 +31,36 @@ const statusColorMap = {
   vacation: "warning",
 };
 
-const INITIAL_VISIBLE_COLUMNS = ["id","name", "age","email", "status", "actions"];
+
+
+
+const INITIAL_VISIBLE_COLUMNS = ["_id", "name", "phone", "email", "vinNumber","status", "actions"];
+
 
 export default function VinTable() {
+  const [entryData, setEntryData] = useState()
+
+  useEffect(() => {
+    
+    try {
+      fetch("http://localhost:3000/api/entries/", {
+        cache: "no-store",
+        method: "GET"
+      }).then(res => {
+        if (!res.ok) { throw new Error('Network response was not ok') }
+        return res.json()
+      }).then((data) => setEntryData(data))
+
+      
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }, [])
+
+  // { entryData ? console.log(entryData) : console.log("no data") }
+
+
   const [filterValue, setFilterValue] = React.useState("");
   const [selectedKeys, setSelectedKeys] = React.useState(new Set([]));
   const [visibleColumns, setVisibleColumns] = React.useState(new Set(INITIAL_VISIBLE_COLUMNS));
@@ -52,7 +81,7 @@ export default function VinTable() {
   }, [visibleColumns]);
 
   const filteredItems = React.useMemo(() => {
-    let filteredUsers = [...users];
+    let filteredUsers = entryData ? [...entryData] : []
 
     if (hasSearchFilter) {
       filteredUsers = filteredUsers.filter((user) =>
@@ -93,13 +122,13 @@ export default function VinTable() {
     switch (columnKey) {
       case "name":
         return (
-        //   <User
-        //     avatarProps={{radius: "lg", src: user.avatar}}
-        //     description={user.email}
-        //     name={cellValue}
-        //   >
-        //     {user.email}
-        //   </User> 
+          //   <User
+          //     avatarProps={{radius: "lg", src: user.avatar}}
+          //     description={user.email}
+          //     name={cellValue}
+          //   >
+          //     {user.email}
+          //   </User> 
           <p className="font-bold">{user.name}</p>
         );
       case "role":
@@ -163,10 +192,10 @@ export default function VinTable() {
     }
   }, []);
 
-  const onClear = React.useCallback(()=>{
+  const onClear = React.useCallback(() => {
     setFilterValue("")
     setPage(1)
-  },[])
+  }, [])
 
   const topContent = React.useMemo(() => {
     return (
@@ -230,7 +259,7 @@ export default function VinTable() {
           </div> */}
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-default-400 text-small">Total {users.length} users</span>
+          <span className="text-default-400 text-small">Total {entryData?.length} users</span>
           <label className="flex items-center text-default-400 text-small">
             Rows per page:
             <select
@@ -250,7 +279,7 @@ export default function VinTable() {
     statusFilter,
     visibleColumns,
     onRowsPerPageChange,
-    users.length,
+    entryData?.length,
     onSearchChange,
     hasSearchFilter,
   ]);
@@ -284,41 +313,44 @@ export default function VinTable() {
     );
   }, [selectedKeys, items.length, page, pages, hasSearchFilter]);
 
-  return (
-    <Table
-      aria-label="Example table with custom cells, pagination and sorting"
-      isHeaderSticky
-      bottomContent={bottomContent}
-      bottomContentPlacement="outside"
-      classNames={{
-        wrapper: "max-h-[382px]",
-      }}
-    //   selectedKeys={selectedKeys}
-    //   selectionMode="multiple"
-    //   sortDescriptor={sortDescriptor}
-      topContent={topContent}
-      topContentPlacement="outside"
-      onSelectionChange={setSelectedKeys}
-      onSortChange={setSortDescriptor}
-    >
-      <TableHeader columns={headerColumns}>
-        {(column) => (
-          <TableColumn
-            key={column.uid}
-            align={column.uid === "actions" ? "center" : "start"}
-            allowsSorting={column.sortable}
-          >
-            {column.name}
-          </TableColumn>
-        )}
-      </TableHeader>
-      <TableBody emptyContent={"No users found"} items={sortedItems}>
-        {(item) => (
-          <TableRow key={item.id}>
-            {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
-  );
+  // return (
+    return (
+      <Table
+        aria-label="Example table with custom cells, pagination and sorting"
+        isHeaderSticky
+        bottomContent={bottomContent}
+        bottomContentPlacement="outside"
+        classNames={{
+          wrapper: "max-h-[382px]",
+        }}
+        //   selectedKeys={selectedKeys}
+        //   selectionMode="multiple"
+        //   sortDescriptor={sortDescriptor}
+        topContent={topContent}
+        topContentPlacement="outside"
+        onSelectionChange={setSelectedKeys}
+        onSortChange={setSortDescriptor}
+      >
+        <TableHeader columns={headerColumns}>
+          {(column) => (
+            <TableColumn
+              key={column?.uid}
+              align={column?.uid === "actions" ? "center" : "start"}
+              allowsSorting={column?.sortable}
+            >
+              {column?.name}
+            </TableColumn>
+          )}
+        </TableHeader>
+        <TableBody emptyContent={"No users found"} items={sortedItems}>
+          {(item) => (
+            <TableRow key={item?._id}>
+              {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    )
+
+  // );
 }
