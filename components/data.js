@@ -11,9 +11,9 @@ const columns = [
 ];
 
 const statusOptions = [
-  {name: "Active", uid: "active"},
-  {name: "Paused", uid: "paused"},
-  {name: "Vacation", uid: "vacation"},
+  {name: "Payment Pending", uid: "payemntPending"},
+  {name: "Payment Recieve", uid: "paymentRecieved"},
+  {name: "Payment Decline", uid: "paymentDecline"},
 ];
 
 const users = [
