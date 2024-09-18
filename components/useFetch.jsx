@@ -1,7 +1,7 @@
 export default async function GetEntries(){
 
     try {
-        const res = await fetch("http://localhost:3000/api/entries/",{
+        const res = await fetch("https://auto-audit.vercel.app/api/entries/",{
           cache: "no-store",
           method: 'GET'
         })

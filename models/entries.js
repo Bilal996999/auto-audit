@@ -2,6 +2,7 @@ import mongoose, {Schema} from "mongoose";
 
 const entriesSchema = new Schema(
     {
+        invoiceNumber: String,
         name:String,
         email: String,
         phone: String,

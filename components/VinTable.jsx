@@ -52,7 +52,7 @@ const VinTable = () => {
   };
 
   const filteredData = entryData?.filter((item) =>
-    item.vinNumber.toLowerCase().includes(searchTerm.toLowerCase())
+    item.invoiceNumber.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleUpdatePending = async(data) =>{
@@ -139,13 +139,13 @@ const VinTable = () => {
       <Input
         clearable
         bordered
-        placeholder="Search By Vin Number"
+        placeholder="Search By Invoice Number"
         onChange={handleSearch}
         className='mb-5 max-w-[30%]'
       />
       <Table aria-label="Example table with dynamic content">
         <TableHeader>
-          <TableColumn>ID</TableColumn>
+          <TableColumn>Invoice Number</TableColumn>
           <TableColumn>Name</TableColumn>
           <TableColumn>Email</TableColumn>
           <TableColumn>Phone</TableColumn>
@@ -156,7 +156,7 @@ const VinTable = () => {
         <TableBody>
           {filteredData?.map((item, index) => (
             <TableRow key={item._id}>
-              <TableCell>{index}</TableCell>
+              <TableCell>#{item.invoiceNumber || index}</TableCell>
               <TableCell><strong>{item.name}</strong></TableCell>
               <TableCell>{item.email}</TableCell>
               <TableCell>{item.phone}</TableCell>

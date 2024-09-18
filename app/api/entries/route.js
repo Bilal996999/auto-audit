@@ -3,10 +3,10 @@ import Entries from "@/models/entries"
 import { NextResponse } from "next/server"
 
 export async function POST(request){
-    const {name, email, phone, vinNumber, status} = await request.json()
+    const {invoiceNumber, name, email, phone, vinNumber, status} = await request.json()
     await connectMongoDB()
 
-    await Entries.create({name, email, phone, vinNumber, status})
+    await Entries.create({invoiceNumber, name, email, phone, vinNumber, status})
     return NextResponse.json({message: "Entry Created"}, {status: 201})
 }
 

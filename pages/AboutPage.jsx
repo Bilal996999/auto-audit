@@ -15,106 +15,140 @@ const ContactPage = () => {
                                 About Us
                             </h1>
                             <p className='text-[20px] text-[#666]'>
-                                Auto Audit PRO VIN has been delivering detailed vehicle history reports since 2012. Our mission is to reduce uncertainty and fraud in the automotive industry by providing prospective buyers with a clear view of a vehicle{"'"}s history.
+                                {'At Auto Audit Pro, we believe that knowledge is power, especially when it comes to making one of life’s significant investments—buying a car. Our mission is to empower buyers, sellers, and car enthusiasts by providing detailed and transparent vehicle history reports that unveil the true story behind every vehicle.'}
                             </p><br/>
-                            <p className='text-[20px] text-[#666]'>
+                            {/* <p className='text-[20px] text-[#666]'>
                                 Auto Audit PRO VIN is an NMVTIS-approved (National Motor Vehicle Title Information System) data provider. NMVTIS is a national database designed to protect consumers from fraud and unsafe vehicles, prevent stolen vehicles from being resold, and offer accurate vehicle information.
                             </p><br/>
                             <p className='text-[20px] text-[#666]'>
                                 The vehicle history reports provided by Auto Audit PRO VIN are essential for anyone interested in making a safe purchase and avoiding potential hidden issues associated with buying a used vehicle.
-                            </p>
+                            </p> */}
                             
                             {/* ======================================================================= */}
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                How to Perform a Vehicle Check with Auto Audit PRO VIN?
+                                What We Do
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                To check a vehicle{"'"}s history, simply provide the unique 17-character VIN (Vehicle Identification Number) for used vehicles and light trucks from 1980 onwards. An Auto Audit PRO VIN Report will be generated from our extensive database of over 350 million records.
+                                {'Powered by AYS Technologies, Auto Audit Pro offers cutting-edge vehicle history reports based on your car’s VIN (Vehicle Identification Number). We go beyond the basics to deliver a thorough, in-depth analysis of a vehicle’s past, including:'}
                             </p>
-
-                            {/* ======================================================================= */}
-
-                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                How to Use the Auto Audit PRO VIN Service?
-                            </h2>
-                            <p className='text-[20px] text-[#666]'>
-                                We believe our vehicle history reports empower consumers to make informed decisions about buying a specific used vehicle. Auto Audit PRO VIN Reports may include details such as:
-                            </p><br/>
                             <ul className='text-[20px] text-[#666] list-disc pl-6'>
                                 <li>
-                                    Odometer readings        
+                                    <b>Ownership History:</b> Know the number of previous owners, transfer details, and title history.
                                 </li>
                                 <li>
-                                    Title information       
+                                    <b>Accident Reports: </b> Find out if the vehicle has been in any accidents, along with the severity and repair details.
                                 </li>
                                 <li>
-                                    Junk and salvage titles        
+                                    <b>Service and Maintenance Records: </b> Get access to a detailed service history, ensuring the car has been well-maintained.
                                 </li>
                                 <li>
-                                    Flood damage history        
+                                    <b>Odometer Verification: </b> Detect potential odometer rollbacks or inconsistencies.
                                 </li>
                                 <li>
-                                    Accident history        
+                                    <b>Theft and Salvage Checks: </b> {'Ensure the vehicle hasn’t been reported stolen or labeled as a salvage vehicle.'}
                                 </li>
-                                <li>
-                                    Lemon history        
-                                </li>
-                                <li>
-                                    Service records       
-                                </li>
-                                <li>
-                                    Vehicle use records (e.g., if it was used as a taxi, rental, or police vehicle), and more.       
-                                </li>
-                            </ul>
+                            </ul><br/>
+                            <p className='text-[20px] text-[#666]'>
+                                {'We understand that a vehicle’s history plays a crucial role in determining its true value and safety. With Auto Audit Pro, you gain access to data that helps protect you from potential risks, ensuring that your next car purchase is a sound investment.'}
+                            </p><br/>
 
                             {/* ======================================================================= */}
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                How Does Auto Audit PRO VIN Obtain Its Information?
+                                Why Choose Auto Audit Pro?
                             </h2>
-                            <p className='text-[20px] text-[#666]'>
-                                Auto Audit PRO VIN collects detailed information about vehicle titles, specifications, sales, accidents, thefts, and other relevant data from official U.S. government sources across the nation. This allows us to provide you with a thorough history report for the vehicle you are considering.
-                            </p>
+                            <ul className='text-[20px] text-[#666] list-disc pl-6'>
+                                <li>
+                                    <b>Trusted Data: </b> Our reports pull from trusted and verified databases, providing you with accurate and reliable information.
+                                </li>
+                                <li>
+                                    <b>Advanced Technology: </b> Backed by AYS Technologies, we leverage the latest technology to deliver comprehensive and easy-to-read reports within minutes.
+                                </li>
+                                <li>
+                                    <b>Customer-Focused Approach: </b> Our dedicated team is committed to providing exceptional service, ensuring that your experience with Auto Audit Pro is smooth, transparent, and stress-free.
+                                </li>
+                                <li>
+                                    <b>Security and Privacy:  </b> We prioritize the security of your data, ensuring that your information is protected at every step.
+                                </li>
+                            </ul><br/>
 
                             {/* ======================================================================= */}
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Cost of Auto Audit PRO VIN Membership & Vehicle History Report
+                                Our Commitment
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                We offer reliable, customer-friendly services. You can sign up for a membership account or generate sample reports at a competitive price. Car dealers and businesses can register for our dealer membership program for a fee of $69.99 per month. Our dealer services are available not only to car dealers but also to any licensed business that wishes to access our vehicle history reports.
-                            </p>
-
-                            {/* ======================================================================= */}
-
-                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                How Reliable is Auto Audit PRO VIN?
-                            </h2>
-                            <p className='text-[20px] text-[#666]'>
-                                At Auto Audit PRO VIN, we prioritize accuracy and integrity. Our commitment to providing precise and affordable reports makes us a leading choice. We use authoritative databases to ensure the reliability of our information.
-                            </p>
-
-                            {/* ======================================================================= */}
-
-                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Buying a Used Vehicle?
-                            </h2>
-                            <p className='text-[20px] text-[#666]'>
-                                Before making a major purchase, always check the vehicle{"'"}s history. Avoid uncertainty by accessing detailed information on the vehicle{"'"}s past. Validate past accidents, previous owners, potential odometer rollbacks, and more to make an informed decision and avoid future issues.
-                            </p>
-
-                            {/* ======================================================================= */}
-
-                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Selling Your Vehicle?
-                            </h2>
-                            <p className='text-[20px] text-[#666]'>
-                                Validate your vehicle{"'"}s condition with our comprehensive history report to potentially secure a higher selling price. Ensure there are no hidden issues and confirm that you are selling a clean vehicle.
+                                {'At Auto Audit Pro, we don’t just provide reports; we provide peace of mind. We understand the importance of making informed decisions, especially when it comes to purchasing a vehicle. Our commitment to transparency, accuracy, and customer satisfaction drives everything we do. We are here to guide you through your vehicle research journey with reliable data and unwavering support.'}
                             </p><br/>
                             <p className='text-[20px] text-[#666]'>
-                                At Auto Audit PRO VIN, we are committed to providing accurate and comprehensive data to help potential car buyers and owners make safe and informed decisions.
-                            </p>
+                                {'Trust Auto Audit Pro to be your partner in making smarter, safer vehicle decisions. Whether you’re buying, selling, or simply verifying, we’ve got you covered.'}
+                            </p><br/>
+
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                Payment Terms and Conditions
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'By purchasing a detailed vehicle history report from Auto Audit Pro, you agree to the following payment terms and conditions: '}
+                            </p><br/>
+
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                Payment Processing
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'All payments for vehicle history reports are processed securely through our payment gateway. Upon successful payment, you will receive an email containing your detailed report within the agreed-upon timeframe.'}
+                            </p><br/>
+                            <p className='text-[20px] text-[#666]'>
+                                {'The payment descriptor on your card or bank statement will appear as AYS Technologies. Please ensure that this name is recognized when reviewing your transaction history.'}
+                            </p><br/>
+
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                Charges
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'You are only being charged for the detailed vehicle history report based on the information you provided, including the vehicle’s VIN number. The cost of the report is final and covers the comprehensive data retrieval and presentation services offered by Auto Audit Pro.'}
+                            </p><br/>
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                No Refund Policy
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'By completing your purchase, you acknowledge and agree that all sales are final. Given the nature of our service, you are not entitled to ask for any refunds, chargebacks, or reversals after receiving your report.'}
+                            </p><br/>
+                            <p className='text-[20px] text-[#666]'>
+                                {'We take great care in providing accurate and thorough vehicle history reports, and once the report is delivered, the service is considered rendered in full. Any attempts to claim refunds or chargebacks will be considered a violation of these terms and conditions.'}
+                            </p><br/>
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                Acceptance of Terms
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'By proceeding with the payment, you confirm that you have read, understood, and agreed to these payment terms and conditions. Your use of Auto Audit Pro’s services constitutes your binding agreement to these terms, and you waive any rights to contest these conditions after receiving your report.'}
+                            </p><br/>
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                Delivery of Service
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'Auto Audit Pro is committed to delivering your vehicle history report via email to the address provided during the purchase process. It is your responsibility to ensure that the email address you provide is correct and capable of receiving our communications.'}
+                            </p><br/>
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                Dispute Resolution
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'In the unlikely event of any dispute arising from your purchase, you agree to contact Auto Audit Pro directly for resolution before pursuing any external claims. Our team is here to assist with any concerns, but please be reminded that refunds or cancellations are not available for completed services.'}
+                            </p><br/>
                         </div>
                         <aside className='w-[30%] sticky top-3 bottom-3'>
                             <FloatVinCard />

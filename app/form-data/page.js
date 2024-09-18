@@ -3,6 +3,7 @@ export const metadata = {
   description: 'Give the details below',
 }
 
+import PaypalConfiguration from '@/pages/PaypalConfiguration'
 import SectionHeading from '@/components/SectionHeading'
 import FormDataPage from '@/pages/FormDataPage'
 import PrivatePolicy from '@/pages/PrivatePolicy'

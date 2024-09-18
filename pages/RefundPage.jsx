@@ -25,59 +25,45 @@ const RefundPage = () => {
                             </h1>
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Thank you for choosing Auto Audit PRO VIN!
+                                Refund Policy Details:
                             </h2>
                             <p className='text-[20px] text-[#666]'>
-                                Please be aware that relying on any vehicle history report when purchasing a vehicle is at your own risk. We cannot be held liable for any purchases made based on our reports.
+                                {'If you receive any defective data in a report, you are required to send us proof of the defective data. If you wish to request a refund, you must contact us at refund@Autoauditpro.com. Autoauditpro.com will return your payment within 1–2 working days. If the data is correct, there will be no option for a refund. You can contact us anytime via email or live chat support. We are available 24/7 via live chat support, and we prefer that you contact us through live chat for faster resolution of your queries.'}
                             </p><br />
-                            <p className='text-[20px] text-[#666]' >
-                                A refund may be issued only if the following conditions are met:
-                            </p><br />
-                            <ol className='text-[20px] text-[#666] list-decimal pl-6'>
-                                <li>
-                                    The refund request is made within 14 days of the purchase.
-                                </li>
-                                <li>
-                                    The reason for the refund is considered valid according to our policy.
-                                </li>
-                            </ol>
-
                             {/* ======================================================================= */}
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Valid Reasons for a Refund Include:
+                                Grounds for Refund:
                             </h2>
                             <ul className='text-[20px] text-[#666] list-disc pl-6'>
                                 <li>
-                                    Receiving an empty report.
+                                    Inaccurate or incomplete information in the report.
                                 </li>
                                 <li>
-                                    Being charged twice for the same report.
-                                </li>
+                                    Technical issues or errors preventing access to the report.
+                                </li><br/>
+                            <p className='text-[20px] text-[#666]'>
+                                {'Refunds will not be granted for dissatisfaction with the information contained in the report if it aligns with the data presented at the time of purchase.'}
+                            </p><br />
                             </ul><br />
 
                             {/* ======================================================================= */}
 
                             <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
-                                Invalid Reasons for a Refund Include
+                                Money-Back Guarantee:
                             </h2>
-                            <ul className='text-[20px] text-[#666] list-disc pl-6'>
-                                <li>
-                                    Inaccuracies in the report.
-                                </li>
-                                <li>
-                                    Incomplete report.
-                                </li>
-                                <li>
-                                    Delays in receiving the report.
-                                </li>
-                                <li>
-                                    Failing to cancel the subscription before the renewal date.
-                                </li>
-                            </ul><br />
                             <p className='text-[20px] text-[#666]'>
-                                Please be aware that the monthly fee and subscription terms are clearly stated before purchase, and these terms are also detailed on the purchase page and in our terms and conditions. If the subscription was not canceled before the next billing cycle, this does not qualify as a valid reason for a refund.
+                                {'We stand by the accuracy and quality of our reports. As part of our commitment to customer satisfaction, all our services come with a 100% money-back guarantee. If the report does not meet our quality standards, you are entitled to a full or partial refund.'}
                             </p><br />
+                            {/* ======================================================================= */}
+
+                            <h2 className='text-[32px] font-medium leading-[1em] mt-12 mb-7'>
+                                NOTE: 
+                            </h2>
+                            <p className='text-[20px] text-[#666]'>
+                                {'The Descriptor in Your Statement will appear as AYS Technologies '}
+                            </p><br />
+
                             <p className='text-[20px] text-[#666]'>
                                 If you believe your refund request is valid, please complete the form below with the necessary details or email the following information to info@autoauditprovin.com:
                             </p><br />

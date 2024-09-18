@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Logo from "@/images/logo.png"
 import VinTable from '@/components/VinTable'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 const user = {
     name: 'Tom Cook',
@@ -49,11 +50,12 @@ export default function DashboardPage() {
               <div className="flex h-16 items-center justify-between">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
+                    <Link href={'/'}>
                     <Image
                         alt="Your Company"
                         src={Logo}
                         className="w-full mx-auto mb-2 brightness-200 contrast-200 invert"
-                    />
+                    /></Link>
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">

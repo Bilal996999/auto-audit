@@ -7,7 +7,7 @@ export const metadata = {
 import DashboardPage from '@/pages/DashboardPage'
 import React from 'react'
   
-  const PrivacyPolicy = () => {
+  const Dashboard = () => {
     return (
       <main className="min-h-screen relative login-page">
         <DashboardPage/>
@@ -15,5 +15,5 @@ import React from 'react'
     )
   }
   
-  export default PrivacyPolicy
+  export default Dashboard
   
