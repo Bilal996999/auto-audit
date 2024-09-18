@@ -9,7 +9,7 @@ const PaypalConfiguration = () => {
   const [paidFor, setPaidFor] = useState(false);
   const [error, setError] = useState(null);
 
-  const sendMailUrl = "http://localhost/auto-audit/wp-json/contact-form-7/v1/contact-forms/6/feedback"
+  const sendMailUrl = "https://autoauditpro.com/backend/wp-json/contact-form-7/v1/contact-forms/6/feedback"
 
   // Encode the data in URL-encoded format
   //  const urlEncodeData = (data) => {
