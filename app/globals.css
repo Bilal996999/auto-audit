@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.slick-dots {
+  top: -70px !important;
+  bottom: unset !important;
+}
+
+.slick-dots li.slick-active button:before {
+  font-size: 16px !important;
+  color: #009FE1 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 10px !important;
+  color: #525252 !important;
+  opacity: 1 !important;
+}
+.slick-slide {
+  transition: .5s linear
+}
+
+.slick-slide.slick-active.slick-center.slick-current {
+  scale: 1;
+  background:url('../images/testimonial-current.png') no-repeat center !important;
+  background-size: auto !important;
+}
+.slick-slide.slick-active.slick-center.slick-current :is(img,h3,small,p){
+  scale: 1;
+}
+.slick-slide.slick-active.slick-center.slick-current .relative{
+  padding-inline: 60px;
+}
+.slick-slide.slick-active.slick-center.slick-current p{
+  font-size: 17px;
+  line-height: 1.5em;
+  padding-bottom: 0;
+}
+.slick-slide.slick-active {
+  scale: .9;
+  background:url('../images/testimonial-prev.png') no-repeat bottom !important;
+  background-size: contain !important;
+}
+.slick-slide.slick-active :is(img,h3,small,p){
+  scale: .85 ;
+}
+.slick-slide.slick-active .relative{
+  padding-inline: 80px;
+}
+.slick-slide.slick-active p{
+  line-height: 1.2em;
+  padding-bottom: 90px;
+}
+button.slick-arrow:before {
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+}
+button.slick-arrow {
+  top: 0;
+  bottom:0;
+  margin:auto;
+  width:fit-content;
+  height:fit-content;
+}
+.vin-section{
+  background: url('../images/vin-bg.png') no-repeat center;
+  background-size: cover;
+}
+:has(.login-page) :is(.my-header,.my-footer){
+  display: none;
+}
