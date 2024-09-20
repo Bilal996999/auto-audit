@@ -34,17 +34,17 @@ export default function DashboardPage() {
 
   const router = useRouter()
 
-  if(localStorage.getItem('username') == "" || !localStorage.getItem('username')){
-      router.push('/login')
-  }
-  else{
-    router.push('/dashboard')
-  }
+  // if(localStorage.getItem('username') == "" || localStorage.getItem('username') == null){
+  //     router.push('/login')
+  // }
+  // else{
+  //   router.push('/dashboard')
+  // }
 
-  const handleLogout = () =>{
-    localStorage.setItem('username', "")
-    router.push('/login')
-  }
+  // const handleLogout = () =>{
+  //   localStorage.setItem('username', "")
+  //   router.push('/login')
+  // }
   
 
     return (
@@ -117,7 +117,7 @@ export default function DashboardPage() {
                             <a
                               href={item.href}
                               className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                              onClick={handleLogout}
+                              onClick={()=> router.push('/login')}
                             >
                               {item.name}
                             </a>
