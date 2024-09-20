@@ -66,7 +66,7 @@ const Footer = () => {
                         </h4>
                         <ul className='list-none mt-12'>
                             <li className='text-[18px] text-[#63657E] my-2 mb-10'>
-                                {'Texas City, TX 77590'}
+                                {'Worthington St, Dallas, TX 75204'}
                             </li>
                             <div className='flex justify-start items-center'>
                                 <Image

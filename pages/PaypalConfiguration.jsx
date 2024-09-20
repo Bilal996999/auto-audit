@@ -22,7 +22,7 @@ const PaypalConfiguration = () => {
 
   const formEmail = async (orderID) => {
     const formData = new FormData();
-    formData.append("_wpcf7_unit_tag", "300d571")
+    formData.append("_wpcf7_unit_tag", "2b0f014")
     formData.append("your-invoice-number", orderID)
     formData.append("your-name", localStorage.getItem("name"))
     formData.append("your-email", localStorage.getItem("email"))
@@ -135,7 +135,7 @@ const PaypalConfiguration = () => {
                   purchase_units: [
                     {
                       amount: {
-                        value: "10.00", // Set the payment amount here
+                        value: "35.00", // Set the payment amount here
                       },
                       shipping_preference: "NO_SHIPPING",
                     },

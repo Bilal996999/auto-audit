@@ -21,7 +21,7 @@ const ContactInfo = () => {
                 </li>
                 <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                     <MapPinIcon className='size-5' />
-                    <a href='#'>{'Texas City, TX 77590'}</a>
+                    <a href='#'>{'Worthington St, Dallas, TX 75204'}</a>
                 </li>
             </ul>
             <div className='absolute left-10 bottom-10'>
