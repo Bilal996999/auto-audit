@@ -17,7 +17,7 @@ const HomeHero = () => {
                         <h1 className='text-[#222] mt-5 leading-[1.1em] text-[65px] font-bold'>
                             Sell your vehicle <br/>
                             easily by checking <br/>
-                            it's history report
+                            {"it's history report"}
                         </h1>
                         <div className='mt-[90px]'>
                             <VinForm/>
