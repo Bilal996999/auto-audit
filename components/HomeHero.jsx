@@ -15,9 +15,7 @@ const HomeHero = () => {
                             Find cars audit by VIN numbers
                         </h3>
                         <h1 className='text-[#222] mt-5 leading-[1.1em] text-[65px] font-bold'>
-                            Find the Perfect<br/>
-                            Car by Checking<br/>
-                            its VIN History<br/>
+                            Three easy steps <br/>to get your vehicle<br/> history report
                         </h1>
                         <div className='mt-[90px]'>
                             <VinForm/>

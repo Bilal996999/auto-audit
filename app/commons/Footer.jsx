@@ -3,7 +3,8 @@ import React from 'react'
 import logo from "@/images/logo.png"
 import Image from 'next/image'
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline"
-import socialIcons from "@/images/social-icons.png"
+import FbIcon from "@/images/facebook-icon.png"
+import InstaIcon from "@/images/instagram-icon.png"
 import Link from 'next/link'
 
 const Footer = () => {
@@ -16,11 +17,11 @@ const Footer = () => {
                         <ul className='list-none mt-16'>
                             <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                                 <EnvelopeIcon className='size-5' />
-                                <a href='mailto:connect@finefin.com' className='text-[#63657E] transition-colors hover:text-themeColor'>connect@finefin.com</a>
+                                <a href='mailto:info@autoauditpro.com' className='text-[#63657E] transition-colors hover:text-themeColor'>info@autoauditpro.com</a>
                             </li>
                             <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                                 <PhoneIcon className='size-5' />
-                                <a href='tel:548574367942' className='text-[#63657E] transition-colors hover:text-themeColor'>548 574 3679 42</a>
+                                <a href='tel:4699430106' className='text-[#63657E] transition-colors hover:text-themeColor'>469-943-0106</a>
                             </li>
                         </ul>
                     </div>
@@ -39,7 +40,7 @@ const Footer = () => {
                                 <Link href="/contact-us">Contact Us</Link>
                             </li>
                             <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
-                                <Link href="/">Sample Report</Link>
+                                <Link href="/sample-report">Sample Report</Link>
                             </li>
                         </ul>
                     </div>
@@ -65,11 +66,18 @@ const Footer = () => {
                         </h4>
                         <ul className='list-none mt-12'>
                             <li className='text-[18px] text-[#63657E] my-2 mb-10'>
-                                London{','} New area road 04{','} England
+                                {'Texas City, TX 77590'}
                             </li>
-                            <Image
-                                src={socialIcons}
-                            />
+                            <div className='flex justify-start items-center'>
+                                <Image
+                                    src={FbIcon}
+                                    className='max-w-8'
+                                />
+                                <Image
+                                    src={InstaIcon}
+                                    className='max-w-8'
+                                />
+                            </div>
                         </ul>
                     </div>
                 </div>

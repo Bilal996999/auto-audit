@@ -13,15 +13,15 @@ const ContactInfo = () => {
             <ul className='list-none mt-20'>
                 <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                     <EnvelopeIcon className='size-5' />
-                    <a href='mailto:connect@finefin.com'>connect@finefin.com</a>
+                    <a href='mailto:info@autoauditpro.com'>info@autoauditpro.com</a>
                 </li>
                 <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                     <PhoneIcon className='size-5' />
-                    <a href='tel:548574367942'>548 574 3679 42</a>
+                    <a href='tel:4699430106'>469-943-0106</a>
                 </li>
                 <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
                     <MapPinIcon className='size-5' />
-                    <a href='#'>London, New area road 04, England</a>
+                    <a href='#'>{'Texas City, TX 77590'}</a>
                 </li>
             </ul>
             <div className='absolute left-10 bottom-10'>

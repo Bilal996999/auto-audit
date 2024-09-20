@@ -27,8 +27,8 @@ const HowItWork = () => {
                 />
                 <HowItWorkBox 
                     image={download} 
-                    title="Download Report" 
-                    content="Download report of your vehicle audit" 
+                    title="Email Report" 
+                    content="Get your Report Via Email" 
                 />
             </div>
         </div>

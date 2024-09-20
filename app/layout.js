@@ -10,11 +10,13 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata = {
   title: "Auto Audit Pro",
   description: "Find any car details by VIN number",
+  
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="../images/logo.png" sizes="any" />
       <body className={outfit.className}>
         <Providers>
           <Header />
