@@ -2,6 +2,8 @@ import React from 'react'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline"
 import Image from 'next/image'
 import socialIcons from "@/images/social-icons.png"
+import FbIcon from "@/images/facebook-icon.png"
+import InstaIcon from "@/images/instagram-icon.png"
 
 const ContactInfo = () => {
     return (
@@ -25,9 +27,18 @@ const ContactInfo = () => {
                 </li>
             </ul>
             <div className='absolute left-10 bottom-10'>
-                <Image
-                    src={socialIcons}
-                />
+                <div className='flex justify-start items-center'>
+                    <Link href={'https://www.facebook.com/autoauditpro'}><Image
+                        src={FbIcon}
+                        className='max-w-8'
+                    /></Link>
+                    <Link href={'https://www.instagram.com/autoauditpro/'}>
+                        <Image
+                            src={InstaIcon}
+                            className='max-w-8'
+                        />
+                    </Link>
+                </div>
             </div>
         </div>
     )
