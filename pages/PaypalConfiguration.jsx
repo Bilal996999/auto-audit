@@ -109,7 +109,7 @@ const PaypalConfiguration = () => {
 
     setTimeout(() => {
       setPaidFor(false)
-      router.push('/home')
+      router.push('/')
     }, 1000);
 
     formEmail(orderID)
