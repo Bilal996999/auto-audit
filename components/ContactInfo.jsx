@@ -4,6 +4,7 @@ import Image from 'next/image'
 import socialIcons from "@/images/social-icons.png"
 import FbIcon from "@/images/facebook-icon.png"
 import InstaIcon from "@/images/instagram-icon.png"
+import Link from 'next/link'
 
 const ContactInfo = () => {
     return (
