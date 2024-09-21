@@ -2,7 +2,7 @@
 import React from 'react'
 import logo from "@/images/logo.png"
 import Image from 'next/image'
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline"
+import { EnvelopeIcon, PhoneIcon,MapPinIcon } from "@heroicons/react/24/outline"
 import FbIcon from "@/images/facebook-icon.png"
 import InstaIcon from "@/images/instagram-icon.png"
 import Link from 'next/link'
@@ -66,7 +66,9 @@ const Footer = () => {
                         </h4>
                         <ul className='list-none mt-12'>
                             <li className='text-[18px] text-[#63657E] my-2 mb-10'>
-                                {'Worthington St, Dallas, TX 75204'}
+                                <div className='flex items-center justify-start gap-2'>
+                                    <MapPinIcon className='size-5' />{'Worthington St, Dallas, TX 75204'}
+                                </div>
                             </li>
                             <div className='flex justify-start items-center'>
                                 <Link href={'https://www.facebook.com/autoauditpro'}><Image
