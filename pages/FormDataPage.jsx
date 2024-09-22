@@ -2,9 +2,10 @@
 import React, { useState } from 'react'
 import SectionHeading from '@/components/SectionHeading'
 import Breadcrumb from '@/components/Breadcrumb'
+import usaFlag from '@/images/usaflag.jpg'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline"
-import PaypalConfiguration from '@/pages/PaypalConfiguration'
 import { useRouter } from 'next/navigation'
 
 const FormDataPage = ({ vinNum }) => {
@@ -134,7 +135,9 @@ const FormDataPage = ({ vinNum }) => {
                                 <input type="text" onChange={handleChange} value={formData.name} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Full Name" name='name' />
                                 <input type="text" disabled value={vinNum} className="h-14 rounded-2xl border bg-stone-200 border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required name='vinNumber' placeholder="Enter VIN Number" />
                                 <input type="email" onChange={handleChange} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Email Address" name='email' />
-                                <input type="tel" onKeyUp={handlePhoneNumber} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxLength={'11'} onChange={handleChange} value={formData.phone} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="+1 (XXX)-XXX-XXXX" name='phone' />
+                                <div className='flex items-center gap-2'>
+                                    <Image className='w-[40px] h-12 rounded-2xl object-cover' src={usaFlag}/>
+                                    <input type="tel" onKeyUp={handlePhoneNumber} maxLength={'11'} onChange={handleChange} value={formData.phone} className="h-14 w-full rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="+1 (XXX)-XXX-XXXX" name='phone' /></div>
                                 <label><input type='checkbox'/> I accept the <Link className='text-blue-500' href={'/terms-and-condition'}>terms and conditions</Link>, including the payment and refund policy </label>
                                 <small className='flex justify-start items-start gap-3'>
                                     <ExclamationTriangleIcon className='size-10' />

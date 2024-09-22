@@ -10,60 +10,15 @@ const FaqAccordion = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
     const itemClasses = {
-        base: "py-[32px] w-full",
-        title: "font-medium text-[24px]",
+        base: "md:py-[32px] py-[22px] w-full",
+        title: "font-medium xl:text-[24px] lg:text-[text-20px] md:text-[18px] text-[15px]",
         trigger: "py-0 rounded-lg flex items-center",
         indicator: "text-[20px]",
-        content: "text-[18px] text-[#666] ps-2 pt-5 pe-20",
+        content: "md:text-[18px] sm:text-[16px] text-[14px] text-[#666] ps-2 pt-5 md:pe-20 sm:pe-0",
     };
 
     return (
         <div className='faq-accordion'>
-            {/* <Accordion title="What is an Auto Audit Vehicle history report?" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion>
-            <Accordion title="For whom do we provide Vehicle history report?" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion>
-            <Accordion title="Do Auto Audit reports have information on every vehicle?" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion>
-            <Accordion title="What is a VIN?" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion>
-            <Accordion title="Where can I find my VIN number?" >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-            </Accordion> */}
             <Accordion itemClasses={itemClasses}>
                 <AccordionItem key="1" aria-label="Accordion 1" title="What Can You Learn From a Vehicle History Report?">
                     With a vehicle history report, anyone can find out every single detail about a vehicle’s past. A VIN check reveals accident history, lien records, theft, flood or fire damage, salvage title brands, mileage rollback, past usage (e.g., taxi, rental, police), and more.

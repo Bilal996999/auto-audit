@@ -7,13 +7,13 @@ import download from "@/images/how-it-work-3.png"
 
 const HowItWork = () => {
   return (
-    <section className='py-[80px]'>
+    <section className='md:pt-[80px] sm:pt-[50px] pt-[60px] md:pb-[80px] sm:pb-[50px] pb-[0px]'>
         <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
             <SectionHeading 
             smallHeading="HOW IT WORKS?" 
             mainHeading="Three easy steps to get your vehicle history report"/>
 
-            <div className='mt-20 flex justify-center items-center'>
+            <div className='xl:mt-20 lg:mt-14 md:mt-12 mt-8 flex justify-center items-center md:flex-nowrap flex-wrap'>
                 <HowItWorkBox 
                     image={vinNumber} 
                     title="Enter VIN Number" 

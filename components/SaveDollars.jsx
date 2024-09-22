@@ -12,7 +12,7 @@ const SaveDollars = () => {
             <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
                 <div className='2xl:max-w-[55%] xl:max-w[70%] lg:max-w-[100%] ml-auto'>
                     <SectionHeading smallHeading="" mainHeading="Save Thousands of Dollars" />
-                    <p className='text-[#999] text-[20px] text-center mt-3'>Learn everything there is to know about your next car.</p>
+                    <p className='text-[#999] lg:text-[20px] md:text-[18px] sm:text-[16px] text-center mt-3'>Learn everything there is to know about your next car.</p>
                     <div className='mt-12'>
                         <VinForm />
                         {/* <div className='flex justify-center items-center gap-8 mt-7'>

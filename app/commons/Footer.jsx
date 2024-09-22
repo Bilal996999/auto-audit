@@ -15,57 +15,57 @@ const Footer = () => {
                     <div>
                         <Image src={logo} />
                         <ul className='list-none mt-16'>
-                            <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] flex justify-start items-center gap-2 my-5'>
                                 <EnvelopeIcon className='size-5' />
                                 <a href='mailto:info@autoauditpro.com' className='text-[#63657E] transition-colors hover:text-themeColor'>info@autoauditpro.com</a>
                             </li>
-                            <li className='text-[18px] flex justify-start items-center gap-2 my-5'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] flex justify-start items-center gap-2 my-5'>
                                 <PhoneIcon className='size-5' />
                                 <a href='tel:4699430106' className='text-[#63657E] transition-colors hover:text-themeColor'>469-943-0106</a>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 className='text-[22px] font-medium'>
+                    <div className='md:mt-0 mt-7'>
+                        <h4 className='md:text-[22px] sm:text-[18px] text-[16px] font-medium'>
                             Quick Links
                         </h4>
-                        <ul className='list-none mt-9'>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                        <ul className='list-none md:mt-9 sm:mt-4 mt-1'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/">Home</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/about-us">About Us</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/contact-us">Contact Us</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/sample-report">Sample Report</Link>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 className='text-[22px] font-medium'>
+                    <div className='md:mt-0 mt-7'>
+                        <h4 className='md:text-[22px] sm:text-[18px] text-[16px] font-medium'>
                             Pages
                         </h4>
-                        <ul className='list-none mt-9'>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                        <ul className='list-none md:mt-9 sm:mt-4 mt-1'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/terms-and-condition">Terms and Condition</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/privacy-policy">Privacy Policy</Link>
                             </li>
-                            <li className='text-[18px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/refund-policy">Refund Policy</Link>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 className='text-[22px] font-medium'>
+                    <div className='md:mt-0 mt-7'>
+                        <h4 className='md:text-[22px] sm:text-[18px] text-[16px] font-medium'>
                             Our Address
                         </h4>
-                        <ul className='list-none mt-12'>
-                            <li className='text-[18px] text-[#63657E] my-2 mb-10'>
+                        <ul className='list-none md:mt-9 sm:mt-4 mt-1'>
+                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-2 mb-10'>
                                 <div className='flex items-center justify-start gap-2'>
                                     <MapPinIcon className='size-5' />{'Worthington St, Dallas, TX 75204'}
                                 </div>

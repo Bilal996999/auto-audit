@@ -4,7 +4,11 @@ import quote from "@/images/quote.png"
 
 const TestimonialBox = ({image, name, designation, content}) => {
   return (
-    <div className='px-[40px] pb-[60px] relative text-center mx-0'>
+    <div className='
+    lg:pt-[60px] lg:pl-[60px] lg:pr-[40px] lg:pb-[80px] 
+    md:pt-[40px] md:pl-[40px] md:pr-[30px] md:pb-[60px] 
+    pt-[30px] pl-[30px] pr-[20px] pb-[40px] 
+    relative text-center mx-0'>
         <Image
             src={image}
             className='mx-auto'
@@ -17,7 +21,7 @@ const TestimonialBox = ({image, name, designation, content}) => {
             src={quote}
             className='mx-auto'
         />
-        <p className='text-[#525252] text-[17px] font-normal my-2'>
+        <p className='text-[#525252] md:text-[17px] sm:text-[14px] text-[12px] font-normal my-2'>
             {content}
         </p>
     </div>

@@ -14,7 +14,7 @@ const KeyFeature = () => {
                 mainHeading="Why Vehicle Report is your most 
                 trusted source for car information?"
             />
-            <div className='mt-14 grid grid-cols-3 gap-11'>
+            <div className='mt-14 grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-11'>
                 <KeyFeatureBox 
                     image={keyFeature1} 
                     title="Master the "

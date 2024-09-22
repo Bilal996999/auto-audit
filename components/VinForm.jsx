@@ -26,10 +26,10 @@ const VinForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-        <div className="flex justify-between border rounded-2xl bg-[#fff] p-[6px] border-[#000]/[.1] hover:border-[#000]/[.4] transition">
+        <div className="lg:h-auto h-16 flex justify-between border rounded-2xl bg-[#fff] p-[6px] border-[#000]/[.1] hover:border-[#000]/[.4] transition">
             <input 
             type="text" 
-            className="indent-4 outline-none flex-1 text-[16px] text-[#000]" 
+            className="indent-4 outline-none flex-1 md:text-[16px] text-[14px] text-[#000]" 
             minLength={17} 
             maxLength={17} 
             onChange={handleChange}

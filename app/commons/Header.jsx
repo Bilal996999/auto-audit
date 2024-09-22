@@ -31,7 +31,7 @@ const Header = () => {
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 md:items-center justify-center sm:items-stretch sm:justify-end">
+          <div className="flex flex-1 sm:items-center justify-center items-stretch sm:justify-end">
             <div className="flex md:flex-1 sm:flex-grow-0 items-center">
               <Link href='/'>
                 <Image
@@ -50,7 +50,7 @@ const Header = () => {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-transparent text-[#222]' : 'text-[#222] hover:text-themeColor',
-                      'transition-colors rounded-md px-3 py-2 font-medium text-[20px]',
+                      'transition-colors rounded-md md:px-3 sm:px-2 px-1 py-2 font-medium md:text-[20px] sm:text-[16px]',
                     )}
                   >
                     {item.name}
@@ -59,7 +59,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="hidden absolute inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <ThemeBtn text="Contact Us" redirect="/contact-us" size="small"/>
           </div>
         </div>
