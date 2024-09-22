@@ -59,10 +59,25 @@ const FormDataPage = ({ vinNum }) => {
     const handleChange = (e) => {
         const {name, value} = e.target
 
+
         setFormData((prevSate)=>({
             ...prevSate,
             [name]: value
         }))
+        
+    }
+
+    const handlePhoneNumber = (e) => {
+        const value = e.target.value;
+        const isValid = /^[0-9]*$/.test(value);
+
+        // If the value is valid (only numbers), update the state
+        if (isValid) {
+            return
+        }
+        else {
+            setFormData({phone:''})
+        }
     }
 
     const handleSubmit = (e) => {
@@ -116,10 +131,11 @@ const FormDataPage = ({ vinNum }) => {
                     <form onSubmit={handleSubmit} className='relative mt-10 max-w-prose mx-auto'>
                         <div className='flex justify-start items-start gap-6'>
                             <div className='flex-1 flex-col flex gap-6'>
-                                <input type="text" onChange={handleChange} value={formData.name} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Full Name" name='name' />
-                                <input type="text" disabled value={vinNum} className="h-14 rounded-2xl border bg-stone-200 border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" name='vinNumber' placeholder="Enter VIN Number" />
-                                <input type="email" onChange={handleChange} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Email Address" name='email' />
-                                <input type="tel" onChange={handleChange} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Phone Number" name='phone' />
+                                <input type="text" onChange={handleChange} value={formData.name} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Full Name" name='name' />
+                                <input type="text" disabled value={vinNum} className="h-14 rounded-2xl border bg-stone-200 border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required name='vinNumber' placeholder="Enter VIN Number" />
+                                <input type="email" onChange={handleChange} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Email Address" name='email' />
+                                <input type="tel" onKeyUp={handlePhoneNumber} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxLength={'11'} onChange={handleChange} value={formData.phone} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="+1 (XXX)-XXX-XXXX" name='phone' />
+                                <label><input type='checkbox'/> I accept the <Link className='text-blue-500' href={'/terms-and-condition'}>terms and conditions</Link>, including the payment and refund policy </label>
                                 <small className='flex justify-start items-start gap-3'>
                                     <ExclamationTriangleIcon className='size-10' />
                                     Please be aware that you are about to proceed to the payment step. In the next few moments, you{"'"}ll be asked to enter your payment details to complete your purchase. 

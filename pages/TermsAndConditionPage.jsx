@@ -11,6 +11,12 @@ const TermsAndConditionPage = () => {
           <div className='flex justify-between items-start gap-16 relative'>
             <div className='w-[70%]'>
               <h1 className='text-[44px] font-bold leading-[1em] mt-10 mb-7'>
+                DISCLAIMER
+              </h1>
+              <p className='text-[20px] text-[#666]'>
+                By proceeding with the payment, you acknowledge that you are paying solely for the vehicle history report, and you agree that charges are non-refundable unless the report is not delivered within 24 hours of purchase. In such a case, you are entitled to request a refund. Otherwise, no chargeback or refund claims will be entertained.
+              </p> <br/>
+              <h1 className='text-[44px] font-bold leading-[1em] mt-10 mb-7'>
                 Terms and Conditions
               </h1>
               <p className='text-[20px] text-[#666]'>
