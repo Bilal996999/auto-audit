@@ -28,7 +28,8 @@ const VinTable = () => {
     try {
       fetch("https://autoauditpro.com/api/entries/", {
         cache: "no-store",
-        method: "GET"
+        method: "GET",
+        mode:"no-cors"
       }).then(res => {
         if (!res.ok) { throw new Error('Network response was not ok') }
         return res.json()
@@ -59,6 +60,7 @@ const VinTable = () => {
     try {
       const res = await fetch(`https://autoauditpro.com/api/entries/${data._id}`,{
         method: "PUT",
+        mode:"no-cors",
         headers:{
           "Content-type": "application/json"
         },
@@ -84,6 +86,7 @@ const VinTable = () => {
     try {
       const res = await fetch(`https://autoauditpro.com/api/entries/${data._id}`,{
         method: "PUT",
+        mode:"no-cors",
         headers:{
           "Content-type": "application/json"
         },
@@ -110,6 +113,7 @@ const VinTable = () => {
     try {
       const res = await fetch(`https://autoauditpro.com/api/entries/${data._id}`,{
         method: "PUT",
+        mode:"no-cors",
         headers:{
           "Content-type": "application/json"
         },
