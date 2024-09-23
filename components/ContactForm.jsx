@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ThemeBtn from './ThemeBtn'
 import { Checkbox } from "@nextui-org/react";
 
-const ContactForm = () => {
+const ContactForm = () => { 
 
 
 

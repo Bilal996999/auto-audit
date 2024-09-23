@@ -30,7 +30,6 @@ const VinTable = () => {
         cache: "no-store",
         method: "GET",
         mode:"no-cors",
-        redirect:"follow"
       }).then(res => {
         if (!res.ok) { throw new Error('Network response was not ok') }
         return res.json()
@@ -61,8 +60,6 @@ const VinTable = () => {
     try {
       const res = await fetch(`/api/entries/${data._id}`,{
         method: "PUT",
-        mode:"no-cors",
-        redirect:"follow",
         headers:{
           "Content-type": "application/json"
         },
@@ -88,8 +85,6 @@ const VinTable = () => {
     try {
       const res = await fetch(`/api/entries/${data._id}`,{
         method: "PUT",
-        mode:"no-cors",
-        redirect:"follow",
         headers:{
           "Content-type": "application/json"
         },
@@ -116,8 +111,6 @@ const VinTable = () => {
     try {
       const res = await fetch(`/api/entries/${data._id}`,{
         method: "PUT",
-        mode:"no-cors",
-        redirect:"follow",
         headers:{
           "Content-type": "application/json"
         },

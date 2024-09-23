@@ -42,7 +42,7 @@ const Testimonials = () => {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 centerMode: true,
-                centerPadding: "30px",
+                centerPadding: "0px",
               }
             }
             // You can unslick at a given breakpoint now by adding:

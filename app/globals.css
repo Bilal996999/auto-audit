@@ -86,6 +86,12 @@ button.slick-arrow {
   display: none;
 }
 
+@media(max-width: 1300px){
+  .slick-slide{
+    background:url('../images/testimonial-current.png') no-repeat center !important;
+    background-size: cover !important;
+  }
+}
 
 @media(max-width: 1024px){
   .slick-slide.slick-active.slick-center.slick-current p{
@@ -93,7 +99,7 @@ button.slick-arrow {
     line-height: 1.4em;
     padding-bottom: 0;
   }
-  .slick-slide.slick-active.slick-center.slick-current {
+  .slick-slide{
     background:url('../images/testimonial-current.png') no-repeat center !important;
     background-size: cover !important;
   }
@@ -108,7 +114,7 @@ button.slick-arrow {
     line-height: 1.3em;
     padding-bottom: 0;
   }
-  .slick-slide.slick-active.slick-center.slick-current {
+  .slick-slide.slick-active{
     background:url('../images/testimonial-current.png') no-repeat center !important;
     background-size: fill !important;
   }
