@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        unoptimized: true,
-    },
     async headers() {
         return [
             {
@@ -19,4 +16,4 @@ const nextConfig = {
     }
 };
 
-export default nextConfig;
+module.exports = nextConfig
