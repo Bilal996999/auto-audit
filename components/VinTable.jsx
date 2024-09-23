@@ -26,10 +26,11 @@ const VinTable = () => {
 
   const getData = () =>{
     try {
-      fetch("https://autoauditpro.com/api/entries/", {
+      fetch("/api/entries/", {
         cache: "no-store",
         method: "GET",
-        mode:"no-cors"
+        mode:"no-cors",
+        redirect:"follow"
       }).then(res => {
         if (!res.ok) { throw new Error('Network response was not ok') }
         return res.json()
@@ -58,9 +59,10 @@ const VinTable = () => {
 
   const handleUpdatePending = async(data) =>{
     try {
-      const res = await fetch(`https://autoauditpro.com/api/entries/${data._id}`,{
+      const res = await fetch(`/api/entries/${data._id}`,{
         method: "PUT",
         mode:"no-cors",
+        redirect:"follow",
         headers:{
           "Content-type": "application/json"
         },
@@ -84,9 +86,10 @@ const VinTable = () => {
   }
   const handleUpdateReceived = async(data) =>{
     try {
-      const res = await fetch(`https://autoauditpro.com/api/entries/${data._id}`,{
+      const res = await fetch(`/api/entries/${data._id}`,{
         method: "PUT",
         mode:"no-cors",
+        redirect:"follow",
         headers:{
           "Content-type": "application/json"
         },
@@ -111,9 +114,10 @@ const VinTable = () => {
   }
   const handleUpdateDeclined = async(data) =>{
     try {
-      const res = await fetch(`https://autoauditpro.com/api/entries/${data._id}`,{
+      const res = await fetch(`/api/entries/${data._id}`,{
         method: "PUT",
         mode:"no-cors",
+        redirect:"follow",
         headers:{
           "Content-type": "application/json"
         },
