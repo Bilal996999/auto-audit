@@ -9,7 +9,7 @@ const ContactPage = () => {
         <Breadcrumb currentPage="Contact Us" />
         <div className='mb-24 relative'>
           <ContactWrapper />
-          <Chat/>
+          
         </div>
     </>
   )

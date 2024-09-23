@@ -34,17 +34,17 @@ export default function DashboardPage() {
 
   const router = useRouter()
 
-  // if(localStorage.getItem('username') == "" || localStorage.getItem('username') == null){
-  //     router.push('/login')
-  // }
-  // else{
-  //   router.push('/dashboard')
-  // }
+  if(localStorage.getItem('username') == "" || localStorage.getItem('username') == null){
+      router.push('/login')
+  }
+  else{
+    router.push('/dashboard')
+  }
 
-  // const handleLogout = () =>{
-  //   localStorage.setItem('username', "")
-  //   router.push('/login')
-  // }
+  const handleLogout = () =>{
+    localStorage.setItem('username', "")
+    router.push('/login')
+  }
   
 
     return (

@@ -155,7 +155,6 @@ const ContactPage = () => {
                         </aside>
                     </div>
                 </div>
-                        <Chat/>
             </section>
         </>
     )

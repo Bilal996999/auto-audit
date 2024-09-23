@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Logo from "@/images/logo.png"
 import { ExclamationCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline"
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 const SignInPage = () => {
 
@@ -56,11 +57,11 @@ const SignInPage = () => {
 
             <div className="flex h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <Image
+                    <Link href={'/'}><Image
                         alt="Your Company"
                         src={Logo}
                         className="w-full mx-auto mb-16"
-                    />
+                    /></Link>
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                         Sign in to your account
                     </h2>

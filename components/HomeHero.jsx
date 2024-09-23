@@ -17,7 +17,7 @@ const HomeHero = () => {
                 <div className='flex justify-center md:flex-row flex-col-reverse items-center flex-wrap gap-5'>
                     <div className='flex-1 md:pt-0 pt-10 md:text-left text-center w-full'>
                         <h3 className='text-themeColor 2xl:text-[25px] xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] font-medium'>
-                            Find cars audit by VIN numbers
+                            Find cars audit by VIN numbers TESTING
                         </h3>
                         <h1 className='text-[#222] mt-5 leading-[1.1em] 2xl:text-[65px] xl:text-[55px] lg:text-[50px] md:text-[42px] sm:text-[35px] text-[30px] font-bold'>
                             Sell your vehicle <br/>

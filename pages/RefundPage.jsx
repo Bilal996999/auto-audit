@@ -93,7 +93,8 @@ const RefundPage = () => {
                                 Payment Method
                                 </li>
                                 <li>
-                                PayPal Transaction ID or Last 4 Digits of Your Credit/Debit Card
+                                PayPal Invoice NO # 
+                                {/* PayPal Invoice ID or Last 4 Digits of Your Credit/Debit Card */}
                                 </li>
                             </ul><br /><br/>
 
@@ -101,15 +102,15 @@ const RefundPage = () => {
                             <form onSubmit={handleSubmit} className='relative'>
                                 <div className='flex justify-start items-start gap-6 lg:flex-nowrap flex-wrap'>
                                     <div className='flex-1 flex-col flex gap-6'>
-                                        <input type="text" className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Name" />
-                                        <input type="text" className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter VIN Number" />
-                                        <input type="email" className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Email Address" />
+                                        <input type="text" required className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Name" />
+                                        <input type="text" required className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter VIN Number" />
+                                        <input type="email" required className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Enter Email Address" />
                                         <input type="text" className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Date of Purchase" />
-                                        <input type="text" className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Your Transaction Paypal ID" />
+                                        <input type="text" required className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" placeholder="Your Invoice No #XXXXXXXXXXXX" />
                                     </div>
 
                                     <div className='flex-1 flex-col flex gap-6'>
-                                    <textarea className="pt-4 rounded-2xl border border-[#99999981] w-full resize-none indent-4 outline-none flex-1 text-[16px] text-[#000]" rows={11} placeholder='Reson for refund' />
+                                    <textarea required className="pt-4 rounded-2xl border border-[#99999981] w-full resize-none indent-4 outline-none flex-1 text-[16px] text-[#000]" rows={11} placeholder='Reson for refund' />
                                     <div className='text-right w-full'>
                                         <button className='rounded-2xl px-14 py-4 transition
                                     lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] bg-themeColor text-[#fff] hover:bg-[#527FF4] w-full'>

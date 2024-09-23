@@ -48,7 +48,7 @@ const ContactForm = () => {
       setName('')
       setEmail('')
       setMessage('')
-      // alert('Message sent')
+      alert('Message sent')
     },400)
 
   }
