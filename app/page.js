@@ -8,7 +8,6 @@ import Footer from "@/app/commons/Footer";
 
 export default function Home() {
   return (
-
     <main className="min-h-screen">
         <HomePage />
     </main>
