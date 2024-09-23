@@ -21,7 +21,7 @@ const FormDataPage = ({ vinNum }) => {
     //OLD FORM DATA POSING FUNCTION
     const addFormData = async() =>{
         try {
-            const res = await fetch(`https://auto-audit.vercel.app/api/entries/`,{
+            const res = await fetch(`https://autoauditpro.com/api/entries/`,{
                 method: "POST",
                 headers:{
                     "content-type": "application/json"
