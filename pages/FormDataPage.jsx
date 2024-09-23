@@ -143,12 +143,12 @@ const FormDataPage = ({ vinNum }) => {
                                     <ExclamationTriangleIcon className='size-10' />
                                     Please be aware that you are about to proceed to the payment step. In the next few moments, you{"'"}ll be asked to enter your payment details to complete your purchase. 
                                     Once the payment is successfully processed, You will receive all the necessary details about the car you requested.</small>
-                                <div className='flex justify-between items-center gap-5'>
+                                <div className='flex justify-between items-center gap-5 md:flex-nowrap flex-wrap'>
                                     <Link href={'/'} className='text-center w-full rounded-2xl border border-[#99999981] px-14 py-4 transition
-                                    text-[20px] bg-white text-[#373535] hover:bg-[#222222] hover:text-[#fff]'>
+                                    md:text-[20px] sm:text-[18px] text-[16px] bg-white text-[#373535] hover:bg-[#222222] hover:text-[#fff]'>
                                         Back to Home</Link>
                                     <button className='rounded-2xl px-14 py-4 transition
-                                    text-[20px] bg-themeColor text-[#fff] hover:bg-[#527FF4] w-full'>
+                                    md:text-[20px] sm:text-[18px] text-[16px] bg-themeColor text-[#fff] hover:bg-[#527FF4] w-full'>
                                         Proceed to Payment</button>
                                 </div>
                             </div>

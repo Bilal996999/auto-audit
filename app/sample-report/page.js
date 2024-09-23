@@ -19,21 +19,21 @@ const SampleReport = () => {
                 <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
                     <SectionHeading mainHeading="This is the report you will be getting" smallHeading="Sample Report" />
                     <div className='flex gap-5 justify-center items-start flex-wrap'>
-                        <div className='flex flex-col justify-center items-center my-14 w-[45%] border-8 pb-3'>
+                        <div className='flex flex-col justify-center items-center md:my-14 my-3 md:w-[45%] w-full border-8 pb-3'>
                             <Image src={report1} className='max-w-full' />
-                            <p className='text-[20px] text-[#666]'>Sample Report Page 1</p>
+                            <p className='md:text-[20px] sm:text-[17px] text-[14px] text-[#666]'>Sample Report Page 1</p>
                         </div>
-                        <div className='flex flex-col justify-center items-center my-14 w-[45%] border-8 pb-3'>
+                        <div className='flex flex-col justify-center items-center md:my-14 my-3 md:w-[45%] w-full border-8 pb-3'>
                             <Image src={report2} className='max-w-full' />
-                            <p className='text-[20px] text-[#666]'>Sample Report Page 2</p>
+                            <p className='md:text-[20px] sm:text-[17px] text-[14px] text-[#666]'>Sample Report Page 2</p>
                         </div>
-                        <div className='flex flex-col justify-center items-center my-14 w-[45%] border-8 pb-3'>
+                        <div className='flex flex-col justify-center items-center md:my-14 my-3 md:w-[45%] w-full border-8 pb-3'>
                             <Image src={report3} className='max-w-full' />
-                            <p className='text-[20px] text-[#666]'>Sample Report Page 3</p>
+                            <p className='md:text-[20px] sm:text-[17px] text-[14px] text-[#666]'>Sample Report Page 3</p>
                         </div>
-                        <div className='flex flex-col justify-center items-center my-14 w-[45%] border-8 pb-3'>
+                        <div className='flex flex-col justify-center items-center md:my-14 my-3 md:w-[45%] w-full border-8 pb-3'>
                             <Image src={report4} className='max-w-full' />
-                            <p className='text-[20px] text-[#666]'>Sample Report Page 4</p>
+                            <p className='md:text-[20px] sm:text-[17px] text-[14px] text-[#666]'>Sample Report Page 4</p>
                         </div>
                     </div>
                 </div>

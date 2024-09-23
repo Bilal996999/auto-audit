@@ -7,6 +7,7 @@ const Chat = () => {
     <div className="absolute right-4 bottom-[-70px]">
         <Image
             src={chat}
+            className='md:w-full w-[50px]'
         />
     </div>
   )

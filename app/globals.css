@@ -115,6 +115,9 @@ button.slick-arrow {
   .slick-slide.slick-active.slick-center.slick-current .relative{
     padding-inline: 40px;
   }
+  .slick-dots li{
+    margin: 0 !important;
+  }
 }
 @media(max-width: 560px){
   .slick-slide.slick-active.slick-center.slick-current p{

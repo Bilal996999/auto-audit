@@ -37,18 +37,6 @@ const PaypalConfiguration = () => {
         method: "POST",
         body: formData
 
-        // body:formData({
-        //   "_wpcf7_unit_tag": "300d571",
-        //   "your-invoice-number": orderID,
-        //   "your-name": localStorage.getItem("name"),
-        //   "your-email": localStorage.getItem("email"),
-        //   "your-phone": localStorage.getItem("phone"),
-        //   "your-vin-number": localStorage.getItem("vinNumber"),
-        //   "your-status": localStorage.getItem("status"),
-        // }) 
-        // urlEncodeData({
-
-        // })
       }
       const res = await fetch(sendMailUrl, reqOptions)
       const data = await res.json()
