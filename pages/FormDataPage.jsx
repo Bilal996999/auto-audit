@@ -17,6 +17,7 @@ const FormDataPage = ({ vinNum }) => {
         vinNumber: vinNum,
         status:'Payment Pending',
     })
+    const [error, setError] = useState('');
 
     //OLD FORM DATA POSING FUNCTION
     const addFormData = async() =>{
@@ -70,15 +71,26 @@ const FormDataPage = ({ vinNum }) => {
 
     const handlePhoneNumber = (e) => {
         const value = e.target.value;
-        const isValid = /^[0-9]*$/.test(value);
+        const isValid = /^[0-9]*$/;
+        const usPhoneRegex = /^(?:\([1-9]\d{2}\)\s?|[1-9]\d{2}[-. ]?)[1-9]\d{2}[-. ]?\d{4}$/;
 
         // If the value is valid (only numbers), update the state
-        if (isValid) {
-            return
-        }
-        else {
-            setFormData({phone:''})
-        }
+        // if (usPhoneRegex.test(value)) {
+        //     return
+        // }
+        // else {
+        //     setFormData({phone:''})
+        // }
+        // Validate the phone number
+    if (!isValid.test(value)) {
+        setFormData({phone:''})
+    }
+    else if(!usPhoneRegex.test(value)){
+          setError('Please enter a valid USA phone number (e.g., 4699430106).');
+      }
+       else {
+        setError('');
+      }
     }
 
     const handleSubmit = (e) => {
@@ -137,7 +149,9 @@ const FormDataPage = ({ vinNum }) => {
                                 <input type="email" onChange={handleChange} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Email Address" name='email' />
                                 <div className='flex items-center gap-2'>
                                     <Image className='w-[40px] h-12 rounded-2xl object-cover' src={usaFlag}/>
-                                    <input type="tel" onKeyUp={handlePhoneNumber} maxLength={'11'} onChange={handleChange} value={formData.phone} className="h-14 w-full rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="+1 (XXX)-XXX-XXXX" name='phone' /></div>
+                                    <input value={'+1'} disabled className="h-14 w-12 rounded-2xl border border-[#99999981] indent-3 outline-none text-[16px] text-[#000]" />
+                                    <input type="text" onKeyUp={handlePhoneNumber} onChange={handleChange} value={formData.phone} className="h-14 w-full rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="(XXX)-XXX-XXXX" name='phone' /></div>
+                                    {error && <p style={{ color: 'red' }}>{error}</p>}
                                 <label><input type='checkbox'/> I accept the <Link className='text-blue-500' href={'/terms-and-condition'}>terms and conditions</Link>, including the payment and refund policy </label>
                                 <small className='flex justify-start items-start gap-3'>
                                     <ExclamationTriangleIcon className='size-10' />
@@ -147,7 +161,7 @@ const FormDataPage = ({ vinNum }) => {
                                     <Link href={'/'} className='text-center w-full rounded-2xl border border-[#99999981] px-14 py-4 transition
                                     md:text-[20px] sm:text-[18px] text-[16px] bg-white text-[#373535] hover:bg-[#222222] hover:text-[#fff]'>
                                         Back to Home</Link>
-                                    <button className='rounded-2xl px-14 py-4 transition
+                                    <button disabled={!!error || !formData.phone} className='rounded-2xl px-14 py-4 transition
                                     md:text-[20px] sm:text-[18px] text-[16px] bg-themeColor text-[#fff] hover:bg-[#527FF4] w-full'>
                                         Proceed to Payment</button>
                                 </div>
