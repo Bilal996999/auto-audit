@@ -126,7 +126,7 @@ const PaypalConfiguration = () => {
                   purchase_units: [
                     {
                       amount: {
-                        value: "35.00", // Set the payment amount here
+                        value: "2.00", // Set the payment amount here
                       },
                       shipping_preference: "NO_SHIPPING",
                     },
