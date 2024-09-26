@@ -53,7 +53,11 @@ const VinTable = () => {
   };
 
   const filteredData = entryData?.filter((item) =>
-    item.invoiceNumber.toLowerCase().includes(searchTerm.toLowerCase())
+    item.invoiceNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.phone.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.vinNumber.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleUpdatePending = async(data) =>{
@@ -132,6 +136,31 @@ const VinTable = () => {
     }
     
   }
+  const handleUpdateDelivered = async(data) =>{
+    try {
+      const res = await fetch(`/api/entries/${data._id}`,{
+        method: "PUT",
+        headers:{
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+          newName: data.name,
+          newEmail: data.Email,
+          newPhone: data.phone,
+          newVinNumber: data.vinNumber,
+          newStatus: "Report Delivered",
+        })
+      })
+      if(!res.ok){
+        throw new Error("Failed to update")
+      }else{
+        getData()
+      }
+    } catch (error) {
+      throw new Error("Failed to update data")
+    }
+    
+  }
 
 
 
@@ -140,7 +169,7 @@ const VinTable = () => {
       <Input
         clearable
         bordered
-        placeholder="Search By Invoice Number"
+        placeholder="Type here to search..."
         onChange={handleSearch}
         className='mb-5 max-w-[30%]'
       />
@@ -163,7 +192,7 @@ const VinTable = () => {
               <TableCell>{item.phone}</TableCell>
               <TableCell>{item.vinNumber}</TableCell>
               
-              <TableCell><Chip className={item.status == "Payment Pending" ? "capitalize bg-slate-200" : item.status == "Payment Received" ? "capitalize bg-green-700 text-white" : "capitalize bg-red-700 text-white"} size="sm" variant="flat">{item.status}</Chip></TableCell>
+              <TableCell><Chip className={item.status == "Payment Pending" ? "capitalize bg-slate-200" : item.status == "Payment Received" ? "capitalize bg-green-700 text-white" : item.status == "Report Delivered" ? "capitalize bg-themeColor text-white" : "capitalize bg-red-700 text-white"} size="sm" variant="flat">{item.status}</Chip></TableCell>
               <TableCell><div className="relative flex justify-end items-center gap-2">
                 <Dropdown>
                   <DropdownTrigger>
@@ -175,6 +204,7 @@ const VinTable = () => {
                     <DropdownItem onClick={()=> handleUpdatePending({...item})}>Payment Pending</DropdownItem>
                     <DropdownItem onClick={()=> handleUpdateReceived({...item})}>Payment Received</DropdownItem>
                     <DropdownItem onClick={()=> handleUpdateDeclined({...item})}>Payment Declined</DropdownItem>
+                    <DropdownItem onClick={()=> handleUpdateDelivered({...item})}>Report Delivered</DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               </div></TableCell>
