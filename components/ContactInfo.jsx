@@ -7,7 +7,7 @@ import InstaIcon from "@/images/instagram-icon.png"
 import Link from 'next/link'
 
 const ContactInfo = () => {
-    
+
 
 
     return (
@@ -28,6 +28,9 @@ const ContactInfo = () => {
                 <li className='lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] flex justify-start items-center gap-2 my-5'>
                     <MapPinIcon className='size-5' />
                     <a href='#'>{'Worthington St, Dallas, TX 75204'}</a>
+                </li>
+                <li className='leading-4 md:pr-14'>
+                    <small>For corporates discussion for complaints, technical assistance we are available for your support via live chat or email us at <a href='mailto:info@autoauditpro.com' className='text-themeColor'>info@autoauditpro.com</a></small>
                 </li>
             </ul>
             <div className='lg:absolute left-10 bottom-10 static lg:mt-0 mt-10'>
