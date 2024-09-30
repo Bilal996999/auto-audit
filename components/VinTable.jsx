@@ -15,10 +15,6 @@ import {
 import { Input } from '@nextui-org/react';
 import { VerticalDotsIcon } from "@/components/VerticalDotsIcon";
 
-const data = [
-  { id: 1, name: 'Item 1', details: 'Details 1' },
-  { id: 2, name: 'Item 2', details: 'Details 2' }
-]
 
 const VinTable = () => {
   const [entryData, setEntryData] = useState()
@@ -33,8 +29,9 @@ const VinTable = () => {
       }).then(res => {
         if (!res.ok) { throw new Error('Network response was not ok') }
         return res.json()
-      }).then((data) => setEntryData(data))
-
+      }).then((data) => (
+        setEntryData(data)
+      ))
 
     } catch (error) {
       console.log(error)
@@ -53,6 +50,7 @@ const VinTable = () => {
   };
 
   const filteredData = entryData?.filter((item) =>
+    console.log(item) ||
     item.invoiceNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.phone.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -180,6 +178,7 @@ const VinTable = () => {
           <TableColumn>Email</TableColumn>
           <TableColumn>Phone</TableColumn>
           <TableColumn>Vin Number</TableColumn>
+          <TableColumn>Date</TableColumn>
           <TableColumn>Status</TableColumn>
           <TableColumn>Actions</TableColumn>
         </TableHeader>
@@ -191,6 +190,7 @@ const VinTable = () => {
               <TableCell>{item.email}</TableCell>
               <TableCell>{item.phone}</TableCell>
               <TableCell>{item.vinNumber}</TableCell>
+              <TableCell>{(item.createdAt).slice('0','10')}</TableCell>
               
               <TableCell><Chip className={item.status == "Payment Pending" ? "capitalize bg-slate-200" : item.status == "Payment Received" ? "capitalize bg-green-700 text-white" : item.status == "Report Delivered" ? "capitalize bg-themeColor text-white" : "capitalize bg-red-700 text-white"} size="sm" variant="flat">{item.status}</Chip></TableCell>
               <TableCell><div className="relative flex justify-end items-center gap-2">

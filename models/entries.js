@@ -6,6 +6,10 @@ const entriesSchema = new Schema(
         name:String,
         email: String,
         phone: String,
+        // createdAt: {
+        //     type: Date,
+        //     default: Date.now, 
+        // },
         vinNumber: String,
         status: String,
     },{

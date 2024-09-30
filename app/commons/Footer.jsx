@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'>
                     <div>
                         <Image src={logo} />
-                        <ul className='list-none mt-16'>
+                        <ul className='list-none mt-10 lg:mb-0 mb-5'>
                             <li className='md:text-[18px] sm:text-[16px] text-[14px] flex justify-start items-center gap-2 my-5'>
                                 <EnvelopeIcon className='size-5' />
                                 <a href='mailto:info@autoauditpro.com' className='text-[#63657E] transition-colors hover:text-themeColor'>info@autoauditpro.com</a>
@@ -22,6 +22,9 @@ const Footer = () => {
                             <li className='md:text-[18px] sm:text-[16px] text-[14px] flex justify-start items-center gap-2 my-5'>
                                 <PhoneIcon className='size-5' />
                                 <a href='tel:4699430106' className='text-[#63657E] transition-colors hover:text-themeColor'>469-943-0106</a>
+                            </li>
+                            <li className='leading-4 md:pr-14'>
+                                <small>For corporates discussion for complaints, technical assistance we are available for your support via live chat or email us at <a href='mailto:info@autoauditpro.com' className='text-themeColor'>info@autoauditpro.com</a></small>
                             </li>
                         </ul>
                     </div>

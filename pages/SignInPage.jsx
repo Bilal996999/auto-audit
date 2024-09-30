@@ -33,7 +33,7 @@ const SignInPage = () => {
             }
     })
 
-    console.log(loginData)
+    // console.log(loginData)
         
     }
 
@@ -43,7 +43,7 @@ const SignInPage = () => {
         localStorage.setItem("username", loginData.email)
         if(loginData.email == EMAILField && loginData.pass == PASSfield){
             setError(false)
-            console.log("valid")
+            // console.log("valid")
             router.push('/dashboard')
         }
         else{
