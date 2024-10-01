@@ -42,9 +42,9 @@ const Footer = () => {
                             <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/contact-us">Contact Us</Link>
                             </li>
-                            <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
+                            {/* <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-3 transition-colors hover:text-themeColor'>
                                 <Link href="/sample-report">Sample Report</Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className='md:mt-0 mt-7'>

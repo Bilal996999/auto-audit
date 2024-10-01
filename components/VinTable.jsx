@@ -179,6 +179,7 @@ const VinTable = () => {
           <TableColumn>Phone</TableColumn>
           <TableColumn>Vin Number</TableColumn>
           <TableColumn>Date</TableColumn>
+          <TableColumn>Time</TableColumn>
           <TableColumn>Status</TableColumn>
           <TableColumn>Actions</TableColumn>
         </TableHeader>
@@ -186,11 +187,12 @@ const VinTable = () => {
           {filteredData?.map((item, index) => (
             <TableRow key={item._id}>
               <TableCell>#{item.invoiceNumber || index}</TableCell>
-              <TableCell><strong>{item.name}</strong></TableCell>
+              <TableCell className='w-[160px]'><strong>{item.name}</strong></TableCell>
               <TableCell>{item.email}</TableCell>
               <TableCell>{item.phone}</TableCell>
               <TableCell>{item.vinNumber}</TableCell>
-              <TableCell>{(item.createdAt).slice('0','10')}</TableCell>
+              <TableCell className='w-[110px] text-[13px]'>{(item.createdAt).slice('0','10')}</TableCell>
+              <TableCell>{(item.createdAt).slice('11','16')}</TableCell>
               
               <TableCell><Chip className={item.status == "Payment Pending" ? "capitalize bg-slate-200" : item.status == "Payment Received" ? "capitalize bg-green-700 text-white" : item.status == "Report Delivered" ? "capitalize bg-themeColor text-white" : "capitalize bg-red-700 text-white"} size="sm" variant="flat">{item.status}</Chip></TableCell>
               <TableCell><div className="relative flex justify-end items-center gap-2">

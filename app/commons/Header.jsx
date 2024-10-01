@@ -9,7 +9,7 @@ import { redirect } from 'next/navigation'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
-    { name: 'Sample Reports', href: '/sample-report', current: false },
+    // { name: 'Sample Reports', href: '/sample-report', current: false },
     { name: 'About Us', href: '/about-us', current: false },
   ]
 
