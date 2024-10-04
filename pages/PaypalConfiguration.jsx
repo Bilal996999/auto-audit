@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { Chip } from "@nextui-org/react";
 import { CheckIcon } from "../components/CheckIcon";
@@ -113,6 +113,12 @@ const PaypalConfiguration = () => {
     setError(err);
     console.error("PayPal Checkout error:", err);
   };
+
+  useEffect(() => {
+    if (!localStorage.getItem('name')) {
+      router.push('/')
+    }
+  }, [])
 
   return (
     <>
