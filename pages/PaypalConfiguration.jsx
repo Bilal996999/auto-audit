@@ -30,7 +30,8 @@ const PaypalConfiguration = () => {
     formData.append("your-email", localStorage.getItem("email"))
     formData.append("your-phone", localStorage.getItem("phone"))
     formData.append("your-vin-number", localStorage.getItem("vinNumber"))
-    formData.append("your-status", localStorage.getItem("status"))
+    formData.append("your-status", "Payment Pending")
+    // formData.append("your-status", localStorage.getItem("status"))
 
     try {
       const reqOptions = {
@@ -64,7 +65,8 @@ const PaypalConfiguration = () => {
           email: localStorage.getItem("email"),
           phone: localStorage.getItem("phone"),
           vinNumber: localStorage.getItem("vinNumber"),
-          status: localStorage.getItem("status")
+          status: "Payment Pending",
+          // status: localStorage.getItem("status")
         })
       })
 
@@ -102,11 +104,11 @@ const PaypalConfiguration = () => {
 
     formEmail(orderID)
 
-    localStorage.setItem("name", "")
-    localStorage.setItem("email", "")
-    localStorage.setItem("phone", "")
-    localStorage.setItem("vinNumber", "")
-    localStorage.setItem("status", "")
+    localStorage.removeItem("name")
+    localStorage.removeItem("email")
+    localStorage.removeItem("phone")
+    localStorage.removeItem("vinNumber")
+    localStorage.removeItem("status")
   }
 
   const handleError = (err) => {
