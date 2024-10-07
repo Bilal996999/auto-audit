@@ -11,9 +11,9 @@ import { useRouter } from 'next/navigation'
 const FormDataPage = ({ vinNum }) => {
     const router = useRouter()
     const [formData, setFormData] = useState({
-        name: localStorage.getItem("name"),
-        email: localStorage.getItem("email"),
-        phone: localStorage.getItem("phone"),
+        name: typeof window!== 'undefined'? localStorage.getItem("name") :"",
+        email: typeof window!== 'undefined'? localStorage.getItem("email") :"",
+        phone: typeof window!== 'undefined'? localStorage.getItem("phone"): "",
         vinNumber: vinNum,
         status:'Payment Pending',
     })
@@ -27,6 +27,7 @@ const FormDataPage = ({ vinNum }) => {
             ...prevSate,
             [name]: value
         }))
+        
         localStorage.setItem("name", formData.name)
         localStorage.setItem("email", formData.email)
         localStorage.setItem("phone", formData.phone)
@@ -111,13 +112,13 @@ const FormDataPage = ({ vinNum }) => {
                     <form onSubmit={handleSubmit} className='relative mt-10 max-w-prose mx-auto'>
                         <div className='flex justify-start items-start gap-6'>
                             <div className='flex-1 flex-col flex gap-6'>
-                                <input type="text" onChange={handleChange} value={formData.name || localStorage.getItem("name")} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Full Name" name='name' />
-                                <input type="text" disabled value={vinNum || localStorage.getItem("vinNumber")} className="h-14 rounded-2xl border bg-stone-200 border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required name='vinNumber' placeholder="Enter VIN Number" />
-                                <input type="email" onChange={handleChange} value={formData.email || localStorage.getItem("email")} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Email Address" name='email' />
+                                <input type="text" onChange={handleChange} value={formData.name} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Full Name" name='name' />
+                                <input type="text" disabled value={vinNum} className="h-14 rounded-2xl border bg-stone-200 border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required name='vinNumber' placeholder="Enter VIN Number" />
+                                <input type="email" onChange={handleChange} value={formData.email} className="h-14 rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="Enter Email Address" name='email' />
                                 <div className='flex items-center gap-2'>
                                     <Image className='w-[40px] h-12 rounded-2xl object-cover' src={usaFlag}/>
                                     <input value={'+1'} disabled className="h-14 w-12 rounded-2xl border border-[#99999981] indent-3 outline-none text-[16px] text-[#000]" />
-                                    <input type="text" onKeyUp={handlePhoneNumber} onChange={handleChange} value={formData.phone || localStorage.getItem("phone")} className="h-14 w-full rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="(XXX)-XXX-XXXX" name='phone' /></div>
+                                    <input type="text" onKeyUp={handlePhoneNumber} onChange={handleChange} value={formData.phone} className="h-14 w-full rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="(XXX)-XXX-XXXX" name='phone' /></div>
                                     {error && <p style={{ color: 'red' }}>{error}</p>}
                                 <label><input type='checkbox'/> I accept the <Link className='text-blue-500' href={'/terms-and-condition'}>terms and conditions</Link>, including the payment and refund policy </label>
                                 <small className='flex justify-start items-start gap-3'>
