@@ -70,7 +70,7 @@ const Footer = () => {
                         <ul className='list-none md:mt-9 sm:mt-4 mt-1'>
                             <li className='md:text-[18px] sm:text-[16px] text-[14px] text-[#63657E] my-2 mb-10'>
                                 <div className='flex items-center justify-start gap-2'>
-                                    <MapPinIcon className='size-5' />{'Worthington St, Dallas, TX 75204'}
+                                    <MapPinIcon className='size-5' />{'605 Smokey Trl Princeton TX 75407'}
                                 </div>
                             </li>
                             <div className='flex justify-start items-center'>
