@@ -120,7 +120,7 @@ const FormDataPage = ({ vinNum }) => {
                                     <input value={'+1'} disabled className="h-14 w-12 rounded-2xl border border-[#99999981] indent-3 outline-none text-[16px] text-[#000]" />
                                     <input type="text" onKeyUp={handlePhoneNumber} onChange={handleChange} value={formData.phone} className="h-14 w-full rounded-2xl border border-[#99999981] indent-4 outline-none text-[16px] text-[#000]" required placeholder="(XXX)-XXX-XXXX" name='phone' /></div>
                                     {error && <p style={{ color: 'red' }}>{error}</p>}
-                                <label><input type='checkbox'/> I accept the <Link className='text-blue-500' href={'/terms-and-condition'}>terms and conditions</Link>, including the payment and refund policy </label>
+                                <label><input type='checkbox' required/> I accept the <Link className='text-blue-500' href={'/terms-and-condition'}>terms and conditions</Link>, including the payment and refund policy </label>
                                 <small className='flex justify-start items-start gap-3'>
                                     <ExclamationTriangleIcon className='size-10' />
                                     Please be aware that you are about to proceed to the payment step. In the next few moments, you{"'"}ll be asked to enter your payment details to complete your purchase. 
